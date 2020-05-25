@@ -48,9 +48,9 @@ namespace OpticalCharacterRecognition
             Console.WriteLine($"    LogLossReduction: {metrics.LogLossReduction:#.###}");
             Console.WriteLine();
 
-            // grab three digits from the data: 6, 7, and 9
+            // grab three digits from the data: 2, 7, and 3
             var digits = context.Data.CreateEnumerable<Digit>(dataView, reuseRowObject: false).ToArray();
-            var testDigits = new Digit[] { digits[7], digits[12], digits[20] };
+            var testDigits = new Digit[] { digits[5], digits[12], digits[22] };
             var engine = model.CreatePredictionEngine<Digit, DigitPrediction>(context);
             for (var i = 0; i < testDigits.Length; i++)
             {
